@@ -1,0 +1,126 @@
+cat > src/index.css <<'EOF'
+/* =========================
+   Crochet Shop — Simple CSS
+   ========================= */
+
+/* Reset-ish */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body,#root { height: 100%; }
+body {
+  font-family: 'Nunito', sans-serif;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,#fffaf9 0%, #fff5f2 100%);
+  color: #1f2937;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Layout container */
+.app-container {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+/* Navbar */
+.site-nav {
+  display:flex;
+  align-items:center;
+  gap:20px;
+  padding:14px 18px;
+  background: rgba(255,240,245,0.9);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(15,23,42,0.06);
+  margin: 8px 16px;
+  position: sticky;
+  top: 12px;
+  z-index: 40;
+}
+.site-brand {
+  font-weight: 700;
+  color: #b91c6a; /* deep pink */
+  font-size: 1.15rem;
+}
+.site-links { margin-left: auto; display:flex; gap:12px; align-items:center; }
+.site-links a {
+  color: #7f1d59;
+  font-weight:600;
+  text-decoration:none;
+  padding:8px 10px;
+  border-radius:8px;
+  transition: all .14s ease;
+}
+.site-links a:hover { background: rgba(127,29,89,0.06); transform: translateY(-1px); box-shadow: 0 6px 16px rgba(127,29,89,0.04); }
+
+/* Hero / Home */
+.hero {
+  background: linear-gradient(90deg, rgba(255,229,235,0.6), rgba(255,249,240,0.2));
+  border-radius: 12px;
+  padding: 32px;
+  margin: 16px;
+  display:flex;
+  gap:24px;
+  align-items:center;
+}
+.hero h1 { color: #b91c6a; font-size: 2rem; margin-bottom:6px; }
+.hero p { color: #374151; }
+
+/* Products grid */
+.products-grid {
+  display:grid;
+  grid-template-columns: repeat( auto-fill, minmax(220px, 1fr) );
+  gap: 18px;
+  margin: 18px 16px;
+}
+
+/* Product card */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(15,23,42,0.04);
+  display:flex;
+  flex-direction:column;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.product-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(15,23,42,0.06); }
+.product-image {
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  background:#f3f4f6;
+}
+.product-body { padding:14px; display:flex; flex-direction:column; gap:8px; flex:1; }
+.product-title { font-weight:700; color:#111827; font-size:1rem; }
+.product-price { color:#b91c6a; font-weight:800; margin-top:auto; }
+.product-actions { display:flex; gap:8px; margin-top:10px; }
+.product-card .card-title { font-size: 1.05rem; }
+.placeholder-img { background: #f0e5ef; color: #a07; }
+body { background: #fffafc; }
+
+/* Buttons */
+.btn {
+  border:0; padding:8px 10px; border-radius:8px; cursor:pointer; font-weight:600;
+}
+.btn-primary { background:#b91c6a; color:white; }
+.btn-ghost { background:transparent; color:#374151; border:1px solid rgba(55,65,81,0.06); }
+
+/* Cart page list */
+.cart-list { display:flex; flex-direction:column; gap:12px; margin: 18px 16px; }
+.cart-item {
+  background:white; padding:12px; border-radius:10px; display:flex; gap:12px; align-items:center;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.04);
+}
+.cart-thumb { width:110px; height:70px; object-fit:cover; border-radius:8px; }
+.qty-controls { display:flex; gap:8px; align-items:center; }
+
+/* Footer */
+.site-footer { text-align:center; padding:18px; color:#6b7280; margin-top:32px; }
+
+/* Responsive niceties */
+@media (max-width:640px) {
+  .hero { flex-direction:column; text-align:center; }
+  .site-links { gap:6px; }
+  .product-image { height:140px; }
+}
+EOF

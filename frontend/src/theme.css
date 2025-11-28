@@ -1,0 +1,50 @@
+:root {
+  --bs-primary: #e6a5c9; /* soft pink */
+  --bs-secondary: #b19cd9; /* lavender */
+  --bs-dark: #4a3c47; /* muted deep purple */
+  --bs-light: #fff7f9; /* off-white with pink hint */
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bs-light);
+  color: var(--bs-dark);
+}
+
+.navbar-brand {
+  font-family: "Dancing Script", cursive;
+  color: var(--bs-primary) !important;
+}
+
+.navbar .nav-link {
+  color: var(--bs-dark);
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+  color: var(--bs-primary);
+}
+
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.btn-primary:hover {
+  background-color: #d58ab4;
+  border-color: #d58ab4;
+}
+
+.btn-outline-primary {
+  color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--bs-primary);
+  color: white;
+}
+
+.card {
+  border-radius: 1rem;
+}
